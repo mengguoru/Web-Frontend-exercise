@@ -8,3 +8,4 @@ my web frontend exercise
 | [Js_ShowMore](Js_ShowMore.html) | (javascript) "show more"-effect |
 | [Js_Html5VideoSpeedRate](Js_Html5VideoSpeedRate.html) | (javascript) html5 video speed rate sample---use video.js.I was interested in how to implement similar effect like YouTube's html5 speed rate controller. |
 | [Demo_json](Demo_json) |  |
+| [Html5-Video-Player](Html5-Video-Player.html) | html5 video player.Use Video.js --- can change speed rate |
