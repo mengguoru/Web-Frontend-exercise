@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>JSON Object Creation in JavaScript</h2>
+
+<p id="demo"></p>
+
+<script>
+//
+//  var text = '{"name":"John Johnson","street":"Oslo West 16","phone":"555 1234567"}';
+//    var obj = JSON.parse(text);
+//
+//    document.getElementById("demo").innerHTML =
+//            obj.name + "<br>" +
+//            obj.street + "<br>" +
+//            obj.phone;
+
+//var arr1=[
+//    {"name":'mengguoru',"id":1},
+//    {"name":"xiaoming","id":2}
+//];
+//var a="";
+//    for(i=0;i<arr1.length;i++){
+//        a+=arr1[i].id.toString()+"---"+arr1[i].name+"<br>";
+//    }
+//    document.getElementById("demo").innerHTML=a;
+
+////json HTTP
+    var b=new XMLHttpRequest();
+    var url="test.txt";
+b.onreadystatechange=function() {
+    if (b.readyState == 4 && b.status == 200) {
+        var theArr = JSON.parse(b.responseText);
+        myPrint(theArr);
+    }
+};
+b.open("GET",url,true);
+b.send();
+
+    function myPrint(arr){
+        var temp="";
+        for(i=0;i<arr.length;i++){
+            temp+='<a href=" '+arr[i].url+' ">'+arr[i].showText+'</a><br>'
+        }
+        document.getElementById("demo").innerHTML=temp;
+    }
+</script>
+
+</body>
+</html>
